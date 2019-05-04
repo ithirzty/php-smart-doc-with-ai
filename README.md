@@ -3,14 +3,14 @@ Make your own smart doc with this PHP library + vocal commands.
 
 ___PLEASE READ THE ENTIRE DOCUMENTATION, IT IS ONLY 30 LINES___
 
-***HOW? - getting started***
+## HOW? - getting started
 
 1. First you need to install your web server (here on a raspberry pi) [tutorial](https://howtoraspberrypi.com/how-to-install-web-server-raspberry-pi-lamp/)
 2. Then download this project to your ``/var/www/html`` directory.
 3. Go to the ``config.php`` file and fill out all the variables
 
 
-***mYour first voice command***
+## Your first voice command
 
 Go to the commands.php file, then you will be able to add your voice command with the ``command()`` function :
 * 1st argument: array of question sentences : 'ok google __what's the wheather like ?__'
@@ -29,6 +29,6 @@ command(['trigger word', 'magic word'], ['what the ai have to say', 'the ai must
 there are also the ``wiki()``, ``gif()`` and ``weather()`` commands.
 
 
-***Personalization**
+## Personalization
 
 You can import images to the ``/imgs/`` folder, name them ``img1.png, img2.png, etc...``, but make sure to fill the ``$extimg`` with their extension in ``config.php``
