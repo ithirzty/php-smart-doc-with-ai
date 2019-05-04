@@ -9,7 +9,7 @@ ___PLEASE READ THE ENTIRE DOCUMENTATION, IT IS ONLY 30 LINES___
 2. Then download this project to your ``/var/www/html`` directory.
 3. Go to the ``config.php`` file and fill out all the variables
 4. Launch chromium or chrome with the following flags __--autoplay-policy=no-user-gesture-required__, __--enable-speech-synthesis__, __--kiosk localhost/index.php__ and __--use-fake-ui-for-media-stream__ (this last one isn't necessary if you use ssl) 
-5. And the last thing to do is to add the following line to your startup (``/etc/xdg/lxsession/LXDE-pi/autostart) script : ``@chromium-browser --autoplay-policy=no-user-gesture-required --enable-speech-synthesis --use-fake-ui-for-media-stream --kiosk localhost/index.php``
+5. And the last thing to do is to add the following line to your startup (``/etc/xdg/lxsession/LXDE-pi/autostart``) script : ``@chromium-browser --autoplay-policy=no-user-gesture-required --enable-speech-synthesis --use-fake-ui-for-media-stream --kiosk localhost/index.php``
 
 ## Your first voice command
 
