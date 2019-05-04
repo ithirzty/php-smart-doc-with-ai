@@ -33,3 +33,8 @@ there are also the ``wiki()``, ``gif()`` and ``weather()`` commands.
 ## Personalization
 
 You can import images to the ``/imgs/`` folder, name them ``img1.png, img2.png, etc...``, but make sure to fill the ``$extimg`` variable with their extension in ``config.php``
+
+
+# Notes
+
+The only pages that you have to modify are ``config.php`` and ``commands.php`` (they are the only ones that are "user friendly"...)
