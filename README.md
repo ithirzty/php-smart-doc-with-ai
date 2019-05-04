@@ -1,6 +1,7 @@
 # php-smart-doc-with-ai
 Make your own smart doc with this PHP library + vocal commands.
 
+___PLEASE READ THE ENTIRE DOCUMENTATION, IT IS ONLY 30 LINES___
 
 ***HOW? - getting started***
 
@@ -24,3 +25,10 @@ command(['trigger word', 'magic word'], ['what the ai have to say', 'the ai must
 //*INT that defines the maximum tolerance (exemple : -user says 'tables' -word registered is 'table' => the tolerance must be 1)
 
 ```
+
+there are also the ``wiki()``, ``gif()`` and ``weather()`` commands.
+
+
+***Personalization**
+
+You can import images to the ``/imgs/`` folder, name them ``img1.png, img2.png, etc...``, but make sure to fill the ``$extimg`` with their extension in ``config.php``
