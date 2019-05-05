@@ -129,7 +129,6 @@ function gif($rec, $say) {
     $content = json_decode(file_get_contents($url));
     $gif = $content->data;
     $url = $gif->embed_url;
-          $text = 'And there is your gif of '.$keyword.'.';
           $code = '<iframe frameborder="0" style="pointer-events: none;width255:px;height:255px;position:absolute;top:50px;left:300px;" id="ifrgif" src="'.$url.'"></iframe>
           <script>
           document.getElementById(\'continf\').style.display = \'none\';
