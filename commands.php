@@ -16,7 +16,7 @@ include('fns.php');/////////////////////////////////////////////////////////////
 command(['hello', 'hi', 'hey'], ['Hey, how are you ?', 'Hello '.$name.', how are you ?']);
 command(['what\'s the weather like', 'weather'], ['It\'s currently '.weather(1).' degres and '.weather(2), 'It\'s '.weather(1).' degres.'], 2);
 wiki(['what is [...]', 'what\'s [...]', 'what is the [...]', 'what\'s the [...]', 'search for [...]'], ['[...]']);
-gif(['search a gif of [...]', 'gif of [...]']);
+gif(['search a gif of [...]', 'gif of [...]'], ['And there is your gif of [...].']);
 
 
 
