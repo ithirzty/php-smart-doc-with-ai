@@ -32,6 +32,8 @@ function weather($i) {
   global $darkskyapi;
   global $location;
   global $lang;
+  global $text;
+  if(!$text) {
 $url = 'https://api.darksky.net/forecast/'.$darkskyapi.'/'.$location.'?lang='.$lang.'&units=auto';
 $content = json_decode(file_get_contents($url));
 $wea = $content->currently;
@@ -56,6 +58,7 @@ switch($i) {
   return $icon;
   break;
 
+}
 }
 }
 
