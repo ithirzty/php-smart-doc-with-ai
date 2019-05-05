@@ -5,6 +5,7 @@ function command($rec, $say, $tol, $wri) {
   global $data;
   global $text;
   global $code;
+  if(!$text) {
   if(!$tol) $tol = 2;
   foreach($rec as $sen) {
     if(strpos($sen, '[...]') !== false) {
@@ -20,13 +21,12 @@ function command($rec, $say, $tol, $wri) {
     }else {
     if(levenshtein($sen, $data) <= $tol) {
 $text = $say[rand(1, count($say))-1];
-$code = $wri[rand(1, count($wri))-1];
-
+$code = $wri;
     }
   }
   }
 }
-
+}
 //WEATHER
 function weather($i) {
   global $darkskyapi;
@@ -65,6 +65,7 @@ function wiki($rec, $say) {
   global $data;
   global $text;
   global $code;
+  if(!$text) {
   foreach($rec as $sen) {
   $vsen = str_replace('[...]', '', $sen);
   if(strpos($data, $vsen) !== false) {
@@ -107,6 +108,7 @@ function wiki($rec, $say) {
 $pretext = $say[rand(1, count($say))-1];
 $text = str_replace('[...]', $text, $pretext);
 }
+}
 
 
 //GIPHY
@@ -115,11 +117,12 @@ function gif($rec, $say) {
   global $data;
   global $text;
   global $code;
+  if(!$text) {
   foreach($rec as $sen) {
   $vsen = str_replace('[...]', '', $sen);
   if(strpos($data, $vsen) !== false) {
   $keyword = explode($vsen, $data)[1];
-  $url = 'https://api.giphy.com/v1/gifs/random?api_key='.$giphyapi.'&tag='.$keyword.'&limit=1';
+  $url = 'https://api.giphy.com/v1/gifs/random?api_key=TMjQZf3WezGK8hGJJw4m5vUPRG7C03XS&tag='.$keyword.'&limit=1';
     $content = json_decode(file_get_contents($url));
     $gif = $content->data;
     $url = $gif->embed_url;
@@ -135,6 +138,7 @@ function gif($rec, $say) {
           </script>';
           $pretext = $say[rand(1, count($say))-1];
           $text = str_replace('[...]', $text, $pretext);
+}
 }
 }
 }
