@@ -139,7 +139,7 @@ function gif($rec, $say) {
   }, 30000);
           </script>';
           $pretext = $say[rand(1, count($say))-1];
-          $text = str_replace('[...]', $text, $pretext);
+          $text = str_replace('[...]', $keyword, $pretext);
 }
 }
 }
