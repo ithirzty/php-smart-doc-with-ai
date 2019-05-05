@@ -122,7 +122,7 @@ function gif($rec, $say) {
   $vsen = str_replace('[...]', '', $sen);
   if(strpos($data, $vsen) !== false) {
   $keyword = explode($vsen, $data)[1];
-  $url = 'https://api.giphy.com/v1/gifs/random?api_key=TMjQZf3WezGK8hGJJw4m5vUPRG7C03XS&tag='.$keyword.'&limit=1';
+  $url = 'https://api.giphy.com/v1/gifs/random?api_key='.$giphyapi.'&tag='.$keyword.'&limit=1';
     $content = json_decode(file_get_contents($url));
     $gif = $content->data;
     $url = $gif->embed_url;
