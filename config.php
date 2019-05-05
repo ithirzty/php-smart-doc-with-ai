@@ -9,6 +9,7 @@ $location = '48.834190,2.316140'; //your coordinates (location)
 
 //OTHER STUFF
 $darkskyapi = ''; //your darksky private key
+$giphyapi = ''; //your giphy private key
 $responsivevoiceapi = ''; //your responsivevoice private key
 $newsapi = '7facd3ce1e4a45ca82299b95fca6adf8'; //your newsapi.org privatekey
 $lang = 'en'; //your language by two characters
