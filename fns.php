@@ -6,13 +6,12 @@ function command($rec, $say, $tol, $wri) {
   global $text;
   global $code;
   if(!$text) {
-  if(!$tol) $tol = 2;
+  if(!$tol) $tol = 4;
   foreach($rec as $sen) {
     if(strpos($sen, '[...]') !== false) {
       $vsen = str_replace('[...]', '', $sen);
       if(strpos($data, $vsen) !== false) {
       $var = explode($vsen, $data)[1];
-      return $var;
       $text = $say[rand(1, count($say))-1];
       if($wri) {
       $code = $wri[rand(1, count($wri))-1];
@@ -24,8 +23,15 @@ $text = $say[rand(1, count($say))-1];
 $code = $wri;
     }
   }
-  }
 }
+if($var) {
+  $text = '...';
+  return $var;
+}else{
+  return NULL;
+}
+}
+
 }
 //WEATHER
 function weather($i) {
