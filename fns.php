@@ -25,7 +25,7 @@ $code = $wri;
   }
 }
 if($var) {
-  $text = '...';
+  $text = '__blank__';
   return $var;
 }else{
   return NULL;
