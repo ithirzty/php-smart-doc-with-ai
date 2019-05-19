@@ -1,10 +1,15 @@
 <?php
 finiv:
+if($text== '__blank__' ) {
+  $text = '';
+}else{
 if(!$text) {
   $text = $fail;
 }
+}
+
 $text = htmlspecialchars($text);
-echo <<<ENDHEREDOC
+$html = echo <<<ENDHEREDOC
 $code
 <script src="//code.responsivevoice.org/responsivevoice.js?key=$responsivevoiceapi"></script>
 <div id="ai" style="position:absolute;left:calc(100% - 250px);width:250px !important;padding:20px;border-color:white;height:500px;border-radius:7px;top:20px;overflow-y:scroll;">
@@ -39,3 +44,6 @@ document.getElementById('text').innerHTML = '';
 }
 </script>
 ENDHEREDOC;
+if($text !== ''){
+  echo $html;
+}
